@@ -30,16 +30,15 @@
                 <input type="file" name="file" id="file">
                 <button type="submit" id="sendMessage">Send</button>
             </form>
-            <div id="chatMessages">
-                <?php
-                include 'chat.php';
-                ?>
-                
-            </div>
         </div>
 
-    </div>
+            
+                <div id="chatMessages">
+                    <?php
+                    include 'chat.php';
+                    ?>
 
+                </div>
 </body>
 
 

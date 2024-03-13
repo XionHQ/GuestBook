@@ -7,17 +7,27 @@
                 if ($messages !== null) {
                     // Display each message
                     foreach ($messages as $message) {
-                        // Escape user-generated content before outputting it
+                        // Escape user-generated content before outputting it\
+                        $escaped_username = htmlspecialchars($message['username']);
                         $escaped_message = htmlspecialchars($message['message']);
                         $escaped_image_url = htmlspecialchars($message['image_url']);
 
                         echo "<div class='container'>";
-                        echo "<img src='" . $escaped_image_url . "' alt='Image'>";
+                        echo "<h4>" . $escaped_username . "</h4>";
                         echo "<p>" . $escaped_message . "</p>";
+                        echo "<img src='" . $escaped_image_url . "' alt='Image'>";
                         echo "</div>";
+
+                        if ($escaped_image_url == null) {
+                            // display none
+                            echo "<img src='" . $escaped_image_url . "' alt='Image'>";
+                        }
                     }
+
                 } else {
                     // Handle case where messages is null or empty
                     echo "No messages found.";
                 }
+
+            
                 ?>
