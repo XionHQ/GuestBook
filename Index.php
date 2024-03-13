@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <title></title>
 </head>
+
 <body>
-<nav class="Navbar">
+    <nav class="Navbar">
         <ul class="Navbar-List">
-            <div class="logo">
-                <a href="">
-                    <img src="assets/pfp.jpg" alt="logo">
-                </a>
-            </div>
+            <a href="">
+                <img src="assets/pfp.jpg" alt="logo">
+            </a>
 
             <li><a href="#">Home</a></li>
             <li><a href="#">Chat</a></li>
@@ -27,29 +26,15 @@
             <form id="chatForm">
                 <input type="text" name="message" id="message">
                 <button type="submit">Send</button>
+                <input type="file" name="file" id="file">
             </form>
             <div id="chatMessages">
-            
+
             </div>
         </div>
-       
-    </div>
 
-    <script>
-        document.getElementById("chatForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            var message = document.getElementById("message").value;
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "chat.php", true);
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    document.getElementById("chatMessages").innerHTML += xhr.responseText;
-                    document.getElementById("message").value = ""; // Clear input field after sending message
-                }
-            }
-            xhr.send("message=" + message);
-        });
-    </script>
+    </div>
 </body>
+
+
 </html>
