@@ -10,16 +10,20 @@
 </head>
 
 <body>
-    <nav class="Navbar">
+<nav class="Navbar">
         <ul class="Navbar-List">
-            <a href="">
-                <img src="assets/pfp.jpg" alt="logo">
-            </a>
-
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Chat</a></li>
+            <li>
+                <a href="index.html">
+                    <img src="assets/pfp.jpg" alt="logo">
+                </a>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chatbox.php">Chat</a></li>
             <li><a href="#">Instructions</a></li>
         </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
     </nav>
     <div class="main">
         <div class="chatbox">
@@ -32,13 +36,13 @@
             </form>
         </div>
 
-            
-                <div id="chatMessages">
-                    <?php
-                    include 'chat.php';
-                    ?>
 
-                </div>
+        <div id="chatMessages">
+            <?php
+            include 'chat.php';
+            ?>
+
+        </div>
 </body>
 
 

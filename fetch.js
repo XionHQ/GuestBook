@@ -10,16 +10,16 @@ function fetchMessages() {
 }
 
 fetchMessages();
-setInterval(fetchMessages, 5000); 
+setInterval(fetchMessages, 5000);
 
-document.getElementById('chatForm').addEventListener('submit', function(event) {
-    event.preventDefault(); 
+document.getElementById('chatForm').addEventListener('submit', function (event) {
+    event.preventDefault();
     const formData = new FormData(this);
 
     fetch('back.php', {
-            method: 'POST',
-            body: formData
-        })
+        method: 'POST',
+        body: formData
+    })
         .then(response => {
             if (response.ok) {
                 return response.text(); //
@@ -27,7 +27,6 @@ document.getElementById('chatForm').addEventListener('submit', function(event) {
             throw new Error('Network response was not ok.');
         })
         .then(data => {
-            // Clear form fields after successful submission
             document.getElementById('username').value = '';
             document.getElementById('message').value = '';
             document.getElementById('file').value = '';
