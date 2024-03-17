@@ -19,18 +19,15 @@
             </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="chatbox.php">Chat</a></li>
-            <li><a href="#">Instructions</a></li>
+            <li><a href="Instructions.html">Instructions</a></li>
         </ul>
-        <div class="hamburger" onclick="toggleMenu()">
-            &#9776;
-        </div>
     </nav>
     <div class="main">
         <div class="chatbox">
             <h1>Chatbox</h1>
             <form id="chatForm">
-                <input type="text" name="username" id="username" placeholder="Username">
-                <input type="text" name="message" id="message" placeholder="Type your message">
+                <input type="text" maxlength="50" name="username" id="username" placeholder="Username (Max 50 characters)">
+                <input type="text" maxlength="500" name="message" id="message" placeholder="Message (Max 500 characters)">
                 <input type="file" name="file" id="file">
                 <button type="submit" id="sendMessage">Send</button>
             </form>
@@ -41,7 +38,6 @@
             <?php
             include 'chat.php';
             ?>
-
         </div>
 </body>
 
