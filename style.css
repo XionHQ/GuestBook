@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
   background: #f4f4f4;
 }
 
@@ -14,7 +16,7 @@ body {
   width: 15rem;
   height: 100%;
   background-color: #000000;
-  float: left; 
+  float: left;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -29,9 +31,7 @@ body {
   text-align: center;
 }
 
-.Navbar a:hover {
-  
-}
+.Navbar a:hover {}
 
 .Navbar-List {
   list-style-type: none;
@@ -40,21 +40,21 @@ body {
 .Navbar-List img {
   width: 100px;
   height: 100px;
-  border-radius: 50%; 
+  border-radius: 50%;
   display: flex;
-  margin: 20px auto;  
+  margin: 20px auto;
 }
 
 .chatbox {
   border: 1px solid #dedede;
-  width: calc(100% - 15rem); 
+  width: calc(100% - 15rem);
   height: 100%;
   background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 15rem; 
+  margin-left: 15rem;
 }
 
 .chatbox input {
@@ -83,8 +83,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 15rem; /* Same as the width of the Navbar */
-  width: calc(100% - 15rem); /* Adjust to fill the remaining width */
+  margin-left: 15rem;
+  width: calc(100% - 15rem);
 }
 
 .container {
@@ -97,14 +97,14 @@ body {
   padding: 10px;
   margin: 10px 0;
   width: 50%;
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }
 
 .container p {
   max-width: 100%;
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-  
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 }
 
 .container img {
@@ -114,4 +114,107 @@ body {
   margin-top: 0.5rem;
 }
 
+.hamburgermenu {
+  display: none;
+}
 
+@media screen and (max-width: 768px) {
+  .Navbar {
+    display: none;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chatbox {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  #chatMessages {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .chatbox {
+    width: 100%;
+  
+  }
+
+  #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+}
