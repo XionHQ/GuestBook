@@ -1,12 +1,17 @@
 [
     {
-        "username": "Bob",
-        "message": "Hoi ik ben bob dit is mijn eerste bericht",
-        "image_url": "uploads\/Screenshot 2023-08-31 012119.png"
+        "username": "adadasaasdasd",
+        "message": "asdasdasd",
+        "image_url": null
     },
     {
-        "username": "Mark",
-        "message": "This is so cool lol holy shit bla bla bla bla bla bla bla bla bla bla bla bla",
-        "image_url": "uploads\/sadad.png"
+        "username": "dasad",
+        "message": "asadasd",
+        "image_url": null
+    },
+    {
+        "username": "sdsadsadasdasd",
+        "message": "asdadasdas",
+        "image_url": null
     }
 ]

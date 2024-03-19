@@ -1,13 +1,12 @@
 <?php
-session_start(); 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     
     if (!isset($_SESSION['message_sent']) || !$_SESSION['message_sent']) {
 
-        $username = $_POST['username'];
-        $message = $_POST['message'];
+        $username = htmlspecialchars($_POST['username']);
+        $message = htmlspecialchars($_POST['message']);
 
         if (isset($_FILES['file']) && $_FILES['file']['error'] == 0) {
             $target_dir = "uploads/";
@@ -41,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         file_put_contents('messages.json', $json_data);
 
         
-        $_SESSION['message_sent'] = true;
+    
     }
 }
 ?>

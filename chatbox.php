@@ -42,6 +42,7 @@
         <div id="chatMessages">
             <?php
             include 'chat.php';
+            echo $htmlstring;
             ?>
         </div>
 

@@ -2,29 +2,22 @@
 $json_data = file_get_contents('messages.json');
 $messages = json_decode($json_data, true);
 
+$htmlstring = "";	
 
 if ($messages !== null) {
     foreach ($messages as $message) {
-        
-        $escaped_username = htmlspecialchars($message['username']);
-        $escaped_message = htmlspecialchars($message['message']);
-        $escaped_image_url = htmlspecialchars($message['image_url']);
 
-        echo "<div class='container'>";
-        echo "<h4>" . $escaped_username . "</h4>";
-        echo "<p>" . $escaped_message . "</p>";
-        if(!empty($escaped_image_url)){
-            echo "<img src='" . $escaped_image_url . "' alt='uploaded image'>";
+        $htmlstring .= "<div class='container'>";
+        $htmlstring .= "<h4>" . $message['username'] . "</h4>";
+        $htmlstring .= "<p>" . $message['message']. "</p>";
+        if(!empty($message['image_url'])){
+            $htmlstring .= "<img src='" . $message['image_url'] . "' alt='uploaded image'>";
         }
-        $mydate=getdate(date("U"));
-            echo "<p>" . $mydate['seconds'] . " " . $mydate['month'] . " " . $mydate['year'] . "</p>";      
-        echo "</div>";
+        $htmlstring .= "</div>"; 
     }
 
 } else {
     
-    echo "No messages found.";
+    $htmlstring .= "No messages found.";
 }
-
-
 ?>
