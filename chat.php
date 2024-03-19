@@ -16,6 +16,8 @@ if ($messages !== null) {
         if(!empty($escaped_image_url)){
             echo "<img src='" . $escaped_image_url . "' alt='uploaded image'>";
         }
+        $mydate=getdate(date("U"));
+            echo "<p>" . $mydate['seconds'] . " " . $mydate['month'] . " " . $mydate['year'] . "</p>";      
         echo "</div>";
     }
 

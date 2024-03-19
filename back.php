@@ -1,9 +1,9 @@
 <?php
-session_start(); // Start the session
+session_start(); 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Check if the user has already sent a message during this session
+    
     if (!isset($_SESSION['message_sent']) || !$_SESSION['message_sent']) {
 
         $username = $_POST['username'];
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         file_put_contents('messages.json', $json_data);
 
-        // Mark the message as sent for this session
+        
         $_SESSION['message_sent'] = true;
     }
 }
