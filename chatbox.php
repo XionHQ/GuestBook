@@ -19,7 +19,7 @@
             </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="chatbox.php">Chat</a></li>
-            <li><a href="Instructions.">htmlInstructions</a></li>
+            <li><a href="Instructions.html">Instructions</a></li>
         </ul>
     </nav>
 
@@ -45,19 +45,21 @@
             ?>
         </div>
 
-        <div class="hamburger-menu">
-        <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
-            <span></span>
-        </label>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
 
-        <ul class="menu__box">
-            <li><a class="menu__item" href="#">Home</a></li>
-            <li><a class="menu__item" href="#">Chat</a></li>
-            <li><a class="menu__item" href="">Instructions</a></li>
-          
-        </ul>
-    </div>
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="index.html">Home</a></li>
+                    <li><a class="menu__item" href="chatbox.php">Chat</a></li>
+                    <li><a class="menu__item" href="Instructions.html">Instructions</a></li>
+
+                </ul>
+            </div>
+        
+
 </body>
 
 
