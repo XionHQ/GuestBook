@@ -1,17 +1,7 @@
 [
     {
-        "username": "adadasaasdasd",
-        "message": "asdasdasd",
-        "image_url": null
-    },
-    {
-        "username": "dasad",
-        "message": "asadasd",
-        "image_url": null
-    },
-    {
-        "username": "sdsadsadasdasd",
-        "message": "asdadasdas",
-        "image_url": null
+        "username": "Bob",
+        "message": "Hoi ik ben bob dit is mijn eerste bericht",
+        "image_url": "uploads\/Screenshot 2023-08-31 012119.png"
     }
 ]
