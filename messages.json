@@ -3,5 +3,10 @@
         "username": "Bob",
         "message": "Hoi ik ben bob dit is mijn eerste bericht",
         "image_url": "uploads\/Screenshot 2023-08-31 012119.png"
+    },
+    {
+        "username": "dadasd",
+        "message": "adsasdsa",
+        "image_url": null
     }
 ]

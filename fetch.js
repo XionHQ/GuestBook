@@ -2,7 +2,9 @@ function fetchMessages() {
     fetch('chat.php')
         .then(response => response.text())
         .then(data => {
+            console.log("data is: " + data);
             document.getElementById('chatMessages').innerHTML = data;
+            console.log("done");
         })
         .catch(error => {
             console.error('Error fetching messages:', error);

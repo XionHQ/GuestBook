@@ -20,4 +20,5 @@ if ($messages !== null) {
     
     $htmlstring .= "No messages found.";
 }
-?>
+
+echo $htmlstring;
