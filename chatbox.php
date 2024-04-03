@@ -14,12 +14,11 @@
         <ul class="Navbar-List">
             <li>
                 <a href="index.html">
-                    <img src="assets/pfp.jpg" alt="logo">
+                    <img src="assets/logo.png" alt="logo">
                 </a>
             </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="chatbox.php">Chat</a></li>
-            <li><a href="Instructions.html">Instructions</a></li>
         </ul>
     </nav>
 

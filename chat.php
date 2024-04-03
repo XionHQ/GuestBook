@@ -11,9 +11,11 @@ if ($messages !== null) {
         $htmlstring .= "<h4>" . $message['username'] . "</h4>";
         $htmlstring .= "<p>" . $message['message']. "</p>";
         if(!empty($message['image_url'])){
-            $htmlstring .= "<img src='" . $message['image_url'] . "' alt='uploaded image'>";
+            $htmlstring .= "<img src='" . $message['image_url'] . "' alt='uploaded image'>";      
         }
+        $htmlstring .=  "<p>" . $message['timestamp'] . "</p>";   
         $htmlstring .= "</div>"; 
+      
     }
 
 } else {
